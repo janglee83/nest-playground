@@ -5,6 +5,8 @@ import { DataSource } from 'typeorm';
 import { Artist, Playlist, Song, User } from './entities';
 import { SongsModule } from './songs/songs.module';
 import { PlaylistModule } from './playlist/playlist.module';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -21,6 +23,8 @@ import { PlaylistModule } from './playlist/playlist.module';
     }),
     SongsModule,
     PlaylistModule,
+    AuthModule,
+    UserModule,
   ],
 })
 export class AppModule implements NestModule {
